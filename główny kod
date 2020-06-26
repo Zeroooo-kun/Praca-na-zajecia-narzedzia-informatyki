@@ -7,11 +7,11 @@ using namespace std;
 class Figura
 {
 public:
+
 virtual ~Figura (){}
 virtual void rysuj()=0;
 virtual void przesuń()=0;
 virtual void obrót ()=0;
-
 };
 
 class Kwadrat:public Figura
@@ -83,7 +83,7 @@ virtual void obrót ()
 }
 };
 
-class Trapez
+class Trapez: public Figura
 {
 virtual void rysuj ()
 {
@@ -104,59 +104,60 @@ virtual void obrót ()
 class Prostopadłościan 
 {
 private:
-int a;
-int b;
-int h;
-int pole;
+int A;
+int B;
+int H;
+
 public:
-int licz_objętość();
-void wczytaj()
+int licz_objętość_P();
+void wczytaj_P()
 {
-  cout<<"podaj długość a: "<<endl;
-  cin>>a;
-  cout<<"podaj długość b: "<<endl;
-  cin>>b;
-  cout<<"podaj długośc h: "<<endl;
-  cin>>h;
+  cout<<"podaj długość boku A: "<<endl;
+  cin>>A;
+  cout<<"podaj długość boku B: "<<endl;
+  cin>>B;
+  cout<<"podaj długość boku H: "<<endl;
+  cin>>H;
+}
 };
 
-int Prostopadłościan::licz_objętość()
+int Prostopadłościan::licz_objętość_P()
 {
-  return a*b*h;
+  return A*B*H;
 };
+
 class Sześcian
 {
 private:
-int bok_a;
+int K;
 
 public:
-int licz_objętość();
+int licz_objętość_S();
 
-void wczytaj()
+void wczytaj_S()
 {
  
-  cout<<"podaj długość boku a: "<<endl;
-  cin>>bok_a;
-  };
+  cout<<"podaj długość boku sześcianu: "<<endl;
+  cin>>K;
+ }
+ };
   
- int Sześcian::licz_objętość()
+ int Sześcian::licz_objętość_S()
 {
-  return bok_a*bok_a*bok_a;
-}
-
+  return K*K*K;
 };
 
 int main ()
 {
-
-  Figura * a = new Okrąg, * b = new Kwadrat,*c=new Prostokąt,*d=new Elipsa,*e= new Trójkąt;*f= new Trapez
+  cout<<"Wykonanie funkcji wirtualnych"<<endl;
+  
+  Figura * a = new Okrąg, * b = new Kwadrat,*c=new Prostokąt,*d= new Trójkąt,*e= new Trapez;
     
   a->rysuj();
   b->rysuj();
   c->rysuj();
   d->rysuj();
   e->rysuj();
-  f->rysuj();
   
   cout<<endl;
 
@@ -165,7 +166,7 @@ int main ()
   c->przesuń();
   d->przesuń();
   e->przesuń();
-  f->przesuń();
+  
   
   cout<<endl;
 
@@ -174,26 +175,27 @@ int main ()
   c->obrót();
   d->obrót();
   e->obrót();
-  f->obrót();
+ 
   
   delete a;
   delete b;
   delete c;
   delete d;
   delete e;
-  delete f;
-
-
+  
+  cout<<endl;
+  cout<<"Obliczenie objętości prostopadłościanu"<<endl;
   Prostopadłościan P1;
-  P1.wczytaj();
-  cout << "objętość prostopadłościanu wynosi: " << P1.licz_objętość(); 
-  return 0;
+  P1.wczytaj_P();
+  cout << "objętość prostopadłościanu wynosi: " << P1.licz_objętość_P(); 
   
+  
+  cout<<endl;
+  cout<<"Obliczenie objętości sześcianu"<<endl;
   Sześcian S1;
-  S1.wczytaj();
-  cout<<"objętość sześcianu wynosi: "<<S1.licz_objętość():
+  S1.wczytaj_S();
+  cout<<"objętość sześcianu wynosi: "<<S1.licz_objętość_S();
   return 0;
-  
 };
 
 
