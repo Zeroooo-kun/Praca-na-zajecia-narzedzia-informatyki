@@ -87,23 +87,23 @@ class Trapez
 {
 virtual void rysuj ()
 {
- std::cout << "Rysuje trapez: /_\" << std::endl;
+ std::cout << "Rysuje trapez: /_|" << std::endl;
 }
 
 virtual void przesuń ()
 {
- std::cout << "Przemieszczam trapez:     /_\" << std::endl;
+ std::cout << "Przemieszczam trapez:     /_|" << std::endl;
 }
 
 virtual void obrót ()
 {
- std::cout << "Obracam trapez:     /-\ " << std::endl;
+ std::cout << "Obracam trapez:     /-| " << std::endl;
 }
 };
 
 class Prostopadłościan 
 {
-private;
+private:
 int a;
 int b;
 int h;
@@ -128,6 +128,42 @@ int Prostopadłościan::licz_objętość()
 
 int main ()
 {
+
+  Figura * a = new Okrąg, * b = new Kwadrat,*c=new Prostokąt,*d=new Elipsa,*e= new Trójkąt;*f= new Trapez
+    
+  a->rysuj();
+  b->rysuj();
+  c->rysuj();
+  d->rysuj();
+  e->rysuj();
+  f->rysuj();
+  
+  cout<<endl;
+
+  a->przesuń();
+  b->przesuń();
+  c->przesuń();
+  d->przesuń();
+  e->przesuń();
+  f->przesuń();
+  
+  cout<<endl;
+
+  a->obrót();
+  b->obrót();
+  c->obrót();
+  d->obrót();
+  e->obrót();
+  f->obrót();
+  
+  delete a;
+  delete b;
+  delete c;
+  delete d;
+  delete e;
+  delete f;
+
+
   Prostopadłościan P1;
   P1.wczytaj();
   cout << "objętość prostopadłościanu wynosi: " << P1.licz_objętość(); 
