@@ -188,6 +188,12 @@ int main ()
   P1.wczytaj();
   cout << "objętość prostopadłościanu wynosi: " << P1.licz_objętość(); 
   return 0;
+  
+  Sześcian S1;
+  S1.wczytaj();
+  cout<<"objętość sześcianu wynosi: "<<S1.licz_objętość():
+  return 0;
+  
 };
 
 
