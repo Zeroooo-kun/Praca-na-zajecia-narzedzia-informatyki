@@ -6,32 +6,99 @@ using namespace std;
 
 class Figura
 {
+public:
+virtual ~Figura (){}
+virtual void rysuj()=0;
+virtual void przesuń()=0;
+virtual void obrót ()=0;
 
 };
 
-class Kwadrat
+class Kwadrat:public Figura
 {
-
+virtual void rysuj ()
+{
+ std::cout << "Rysuje kwadrat: [ ]" << std::endl;
+}
+virtual void przesuń ()
+{
+ std::cout << "Przemieszczam kwadrat:     [ ]" << std::endl;
+}
+virtual void obrót ()
+{
+ std::cout << "Obracam kwadrat:     [ ] " << std::endl;
+}
 };
 
-class Koło
+class Okrąg:public Kwadrat
 {
+virtual void rysuj ()
+{
+ std::cout << "Rysuje okrąg: o" << std::endl;
+}
 
+virtual void przesuń ()
+{
+ std::cout << "Przemieszczam okrąg:     o" << std::endl;
+}
+virtual void obrót ()
+{
+ std::cout << "Obracam okrąg:     o " << std::endl;
+}
 };
 
-class Prostokąt
+class Prostokąt:public Kwadrat
 {
+virtual void rysuj ()
+{
+ std::cout << "Rysuje prostokąt: [  ]" << std::endl;
+}
 
+virtual void przesuń ()
+{
+ std::cout << "Przemieszczam prostokąt:     [  ]" << std::endl;
+}
+
+virtual void obrót ()
+{
+ std::cout << "Obracam prostokąt:     []" << std::endl;
+}
 };
 
-class Trójkąt
+class Trójkąt: public Figura
 {
+virtual void rysuj ()
+{
+ std::cout << "Rysuje trójkąt: ^" << std::endl;
+}
 
+virtual void przesuń ()
+{
+ std::cout << "Przemieszczam trójkąt:     ^" << std::endl;
+}
+
+virtual void obrót ()
+{
+ std::cout << "Obracam trójkąt:     > " << std::endl;
+}
 };
 
 class Trapez
 {
+virtual void rysuj ()
+{
+ std::cout << "Rysuje trapez: /_\" << std::endl;
+}
 
+virtual void przesuń ()
+{
+ std::cout << "Przemieszczam trapez:     /_\" << std::endl;
+}
+
+virtual void obrót ()
+{
+ std::cout << "Obracam trapez:     /-\ " << std::endl;
+}
 };
 
 class Prostopadłościan 
@@ -58,7 +125,6 @@ int Prostopadłościan::licz_objętość()
   return a*b*h;
 };
 
-};
 
 int main ()
 {
