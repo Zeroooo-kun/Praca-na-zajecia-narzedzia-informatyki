@@ -33,3 +33,34 @@ class Trapez
 {
 
 };
+
+class Prostopadłościan 
+{
+private;
+int a;
+int b;
+int h;
+int pole;
+public:
+int licz_objętość();
+void wczytaj()
+{
+  cout<<"podaj długość a: "<<endl;
+  cin>>a;
+  cout<<"podaj długość b: "<<endl;
+  cin>>b;
+  cout<<"podaj długośc h: "<<endl;
+  cin>>h;
+};
+
+int Prostopadłościan::licz_objętość()
+{
+  return a*b*h;
+};
+
+};
+
+
+
+
+
