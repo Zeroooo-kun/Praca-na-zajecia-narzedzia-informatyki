@@ -60,7 +60,13 @@ int Prostopadłościan::licz_objętość()
 
 };
 
-
+int main ()
+{
+  Prostopadłościan P1;
+  P1.wczytaj();
+  cout << "objętość prostopadłościanu wynosi: " << P1.licz_objętość(); 
+  return 0;
+};
 
 
 
