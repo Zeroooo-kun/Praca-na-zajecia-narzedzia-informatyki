@@ -124,7 +124,27 @@ int Prostopadłościan::licz_objętość()
 {
   return a*b*h;
 };
+class Sześcian
+{
+private:
+int bok_a;
 
+public:
+int licz_objętość();
+
+void wczytaj()
+{
+ 
+  cout<<"podaj długość boku a: "<<endl;
+  cin>>bok_a;
+  };
+  
+ int Sześcian::licz_objętość()
+{
+  return bok_a*bok_a*bok_a;
+}
+
+};
 
 int main ()
 {
