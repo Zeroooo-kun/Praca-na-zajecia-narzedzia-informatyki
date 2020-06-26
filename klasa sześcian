@@ -1,21 +1,20 @@
 class Sześcian
 {
 private:
-int bok_a;
+int K;
 
 public:
-int licz_objętość();
+int licz_objętość_S();
 
-void wczytaj()
+void wczytaj_S()
 {
  
-  cout<<"podaj długość boku a: "<<endl;
-  cin>>bok_a;
-  };
+  cout<<"podaj długość boku sześcianu: "<<endl;
+  cin>>K;
+ }
+ };
   
- int Sześcian::licz_objętość()
+ int Sześcian::licz_objętość_S()
 {
-  return bok_a*bok_a*bok_a;
-}
-
+  return K*K*K;
 };
