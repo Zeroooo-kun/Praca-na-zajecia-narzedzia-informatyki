@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <stdio.h>
+#include <string.h>
+using namespace std;
+
+class Figura
+{
+
+};
+
+class Kwadrat
+{
+
+};
+
+class Koło
+{
+
+};
+
+class Prostokąt
+{
+
+};
+
+class Trójkąt
+{
+
+};
+
+class Trapez
+{
+
+};
