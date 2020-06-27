@@ -147,6 +147,78 @@ void wczytaj_S()
   return K*K*K;
 };
 
+class Stożek
+{
+  private:
+  double r;
+  double H;
+  
+public:
+int licz_objętość_St();
+
+void wczytaj_St()
+{
+ 
+  cout<<"podaj długość promienia stożka: "<<endl;
+  cin>>r;
+  cout<<"podaj wysokość stożka: "<<endl;
+  cin>>H;
+}
+ };
+ int Stożek::licz_objętość_St()
+{
+ cout << "stożka = " << 1 / 3 * 3.14 * r * r*H;
+return 0; 
+};
+
+class Kula
+{
+  private:
+  double r;
+
+  public:
+  int licz_objętość_Kula();
+
+  void wczytaj_Kula()
+{
+ 
+  cout<<"podaj długość promienia kuli: "<<endl;
+  cin>>r;
+
+}
+};
+int Kula::licz_objętość_Kula()
+{
+cout << "Kuli = " << 4/ 3 * 3.14 * r * r*r;
+return 0; 
+};
+
+class Walec
+{
+  private:
+  double r;
+  double h;
+  
+  public:
+   int licz_objętość_Walec();
+
+  void wczytaj_Walec()
+{
+ 
+  cout<<"podaj długość promienia walca: "<<endl;
+  cin>>r;
+  cout<<"podaj wysokość walca: "<<endl;
+  cin>>h;
+}
+};
+
+int Walec::licz_objętość_Walec()
+{
+ cout << "Walca = " << 3.14 *h*r * r;
+return 0; 
+};
+
+
 int main ()
 {
   cout<<"Wykonanie funkcji wirtualnych"<<endl;
@@ -195,6 +267,26 @@ int main ()
   Sześcian S1;
   S1.wczytaj_S();
   cout<<"objętość sześcianu wynosi: "<<S1.licz_objętość_S();
+  
+  
+  cout<<endl<<endl;
+  cout<<"Obliczanie objętości Stożka"<<endl;
+  Stożek St;
+  St.wczytaj_St();
+  cout<<"objętość "<<St.licz_objętość_St();
+
+  cout<<endl<<endl;
+  cout<<"Obliczanie objętości Kuli"<<endl;
+  Kula K1;
+  K1.wczytaj_Kula();
+  cout<<"objętość "<<K1.licz_objętość_Kula();
+
+  cout<<endl<<endl;
+  cout<<"Obliczanie objętości Walca"<<endl;
+  Walec W1;
+  W1.wczytaj_Walec();
+  cout<<"objętość "<<W1.licz_objętość_Walec();
+  
   return 0;
 };
 
