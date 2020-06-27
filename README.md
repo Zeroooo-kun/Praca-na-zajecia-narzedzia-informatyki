@@ -1,7 +1,7 @@
 # Praca-na-zajecia-narzedzia-informatyki
 Dokumentacja
 
-"Figury goemetryczne płaskie i przestrzenne- funkcje wirtualne i obliczanie objętości"
+**"Figury goemetryczne płaskie i przestrzenne- funkcje wirtualne i obliczanie objętości"**
 
 Projekt mający na celu zapoznanie się z funkcjonowaniem podstawowego narzędzia, umożliwiającego wspólną prace zdalną w ramach zajęć Narzędzia informatyki. 
 Samodzielna realizacja projektu. Symulacja pracy z inną osobą poprzez utorzenie innego konta, dzięki czemu możliwa była symulacja kontaktu międzyludzkiego.
